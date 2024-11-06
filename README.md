@@ -1,5 +1,26 @@
 # Go Backend 側に JWT を実装したサンプル
 
+## 起動
+
+### Backend
+
+```bash
+cd backend
+go run . seed
+go run . serve
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+Backend 側にリバースプロキシを設定しているので、以下でトップページにアクセスできる。
+
+- http://localhost:8000
+
 ## 参考資料
 
 - [golang-jwt/jwt](https://github.com/golang-jwt/jwt)
