@@ -11,7 +11,7 @@ export async function login(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to login, ${message}`);
+    console.log(`failed to login, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as User;
@@ -27,7 +27,7 @@ export async function registerUser(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to register a user, ${message}`);
+    console.log(`failed to register a user, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as User;
@@ -40,7 +40,7 @@ export async function logout(): Promise<{
   const resp = await fetch("/api/logout");
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to register a user, ${message}`);
+    console.log(`failed to register a user, ${message}`);
     return { error: { status: resp.status, message } };
   }
   return {};
@@ -53,7 +53,7 @@ export async function getFolders(): Promise<{
   const resp = await fetch("/api/folders");
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to register a user, ${message}`);
+    console.log(`failed to register a user, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const folders = (await resp.json()) as Folder[];
@@ -66,7 +66,7 @@ export async function getFolder(
   const resp = await fetch(`/api/folders/${id}`);
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to get a folder, ${message}`);
+    console.log(`failed to get a folder, ${message}`);
     return { error: message };
   }
   const data = (await resp.json()) as Folder;
@@ -82,7 +82,7 @@ export async function createFolder(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to create a folder, ${message}`);
+    console.log(`failed to create a folder, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Folder;
@@ -98,7 +98,7 @@ export async function updateFolder(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to update a folder, ${message}`);
+    console.log(`failed to update a folder, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Folder;
@@ -115,7 +115,7 @@ export async function deleteFolder(folder: Folder): Promise<{
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to delete a folder, ${message}`);
+    console.log(`failed to delete a folder, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Folder;
@@ -129,7 +129,7 @@ export async function getTasks(): Promise<{
   const resp = await fetch("/api/tasks");
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to get all tasks, ${message}`);
+    console.log(`failed to get all tasks, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Task[];
@@ -142,7 +142,7 @@ export async function getTask(
   const resp = await fetch(`/api/tasks/${id}`);
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to get a task, ${message}`);
+    console.log(`failed to get a task, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Task;
@@ -158,7 +158,7 @@ export async function createTask(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to create a task, ${message}`);
+    console.log(`failed to create a task, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Task;
@@ -174,7 +174,7 @@ export async function updateTask(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to update a task, ${message}`);
+    console.log(`failed to update a task, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Task;
@@ -190,7 +190,7 @@ export async function deleteTask(
   });
   if (!resp.ok) {
     const message = await resp.text();
-    console.error(`failed to delete a task, ${message}`);
+    console.log(`failed to delete a task, ${message}`);
     return { error: { status: resp.status, message } };
   }
   const data = (await resp.json()) as Task;
