@@ -14,7 +14,7 @@ go run . serve
 
 ```bash
 cd frontend
-npm run dev
+pnpm run dev
 ```
 
 Backend 側にリバースプロキシを設定しているので、以下でトップページにアクセスできる。
