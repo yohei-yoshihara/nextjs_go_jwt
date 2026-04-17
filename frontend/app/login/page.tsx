@@ -4,7 +4,7 @@ import Form from "next/form";
 import { useActionState } from "react";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { login } from "@/app/lib/api";
+import { login } from "@/lib/api";
 import ErrorField from "@/app/ui/error-field";
 
 const loginSchema = z.object({

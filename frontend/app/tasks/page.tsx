@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getTasks } from "@/app/lib/api";
-import { Task } from "@/app/lib/models";
+import { getTasks } from "@/lib/api";
+import { Task } from "@/lib/models";
 import LogoutButton from "../ui/logout-button";
 import Link from "next/link";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";

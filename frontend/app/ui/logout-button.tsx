@@ -1,6 +1,6 @@
 "use client";
 
-import { logout } from "@/app/lib/api";
+import { logout } from "@/lib/api";
 import { redirect } from "next/navigation";
 import { useTransition } from "react";
 

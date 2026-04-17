@@ -1,6 +1,6 @@
 "use client";
 //"use server"
-import { User, Folder, Task } from "@/app/lib/models";
+import { User, Folder, Task } from "@/lib/models";
 
 export async function login(
   user: User
